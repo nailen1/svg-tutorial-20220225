@@ -1,0 +1,48 @@
+<style>
+    #page-loader {
+        width: 150;
+        height: 150;
+    }
+    #page-loader circle {
+        fill: none;
+        stroke-width: 10px;
+        stroke-linecap: round;
+        animation: loader 4s infinite ease-in-out;
+        transform-origin: 50% 50%;
+    }
+@keyframes loader {
+    /* 0% {transform: rotate(0deg)} */
+    50% {transform: rotate(360deg)}
+    /* 100% {transform: rotate(0deg)} */
+    
+}
+
+    #page-loader circle:nth-child(1){
+        stroke: #ef476f;
+        stroke-dasharray: 50;
+        animation-delay: 0.2s;
+    }
+    #page-loader circle:nth-child(2){
+        stroke: #ffd166;
+        stroke-dasharray: 100;
+        animation-delay: 0.4s;
+    }
+    #page-loader circle:nth-child(3){
+        stroke: #06d6a0;
+        stroke-dasharray: 180;
+        animation-delay: 0.6s;
+    }
+    #page-loader circle:nth-child(4){
+        stroke: #118ab2;
+        stroke-dasharray: 350;
+        stroke-dashoffset: -100;
+        animation-delay: 0.8s;
+    }
+</style>
+
+<svg id="page-loader">
+    <circle cx="75" cy="75" r="20"></circle>
+    <circle cx="75" cy="75" r="35"></circle>
+    <circle cx="75" cy="75" r="50"></circle>
+    <circle cx="75" cy="75" r="65"></circle>
+</svg>
